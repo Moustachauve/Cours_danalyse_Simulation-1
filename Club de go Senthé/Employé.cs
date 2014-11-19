@@ -30,10 +30,10 @@ namespace Club_de_go_Senthé
         #endregion
 
         #region MÉTHODE
-        public static List<Employé> ChargerTousLesEmployes()
-        {
+        //public static List<Employé> ChargerTousLesEmployes()
+        //{
 
-        }
+        //}
 
         #endregion
     }

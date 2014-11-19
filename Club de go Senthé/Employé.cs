@@ -38,7 +38,7 @@ namespace Club_de_go_Senthé
             Connection.Open();
 
             SqlCommand CommandeSQL = Connection.CreateCommand();
-            CommandeSQL.CommandText = "SELECT * FROM dbo.Personne";
+            CommandeSQL.CommandText = "SELECT * FROM dbo.Personne2";
             SqlDataReader resultatSQL = CommandeSQL.ExecuteReader();
             listeEmployé.Clear();
             while (resultatSQL.Read())

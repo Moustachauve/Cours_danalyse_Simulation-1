@@ -26,7 +26,7 @@ namespace Club_de_go_Senthé
         /// retourne le nom d'une personne 
         ///</summary>
         private string m_nom;
-        public string Prenom
+        public string nom
         {
             get { return m_nom; }
             set { m_nom = value; }
@@ -46,7 +46,7 @@ namespace Club_de_go_Senthé
         /// retoune une adresse courriel (facultatif) d'une personne en cas de besoin
         ///</summary>
         private string m_addCourriel;
-        public string NumTelephone
+        public string AddCourriel
         {
             get { return m_addCourriel; }
             set { m_addCourriel = value; }

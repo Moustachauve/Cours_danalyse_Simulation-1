@@ -39,7 +39,7 @@ namespace Club_de_go_Senthé
             Connection.Open();
 
             SqlCommand CommandeSQL = Connection.CreateCommand();
-            CommandeSQL.CommandText = "SELECT *FROM [dbo].[Joueur] JINNER JOIN [dbo].[Personne] P ON J.FK_personneID = P.PK_personneID";
+            CommandeSQL.CommandText = "SELECT *FROM [dbo].[Joueur] J INNER JOIN [dbo].[Personne] P ON J.FK_personneID = P.PK_personneID";
             SqlDataReader resultatSQL = CommandeSQL.ExecuteReader();
             listeJoueur.Clear();
             while(resultatSQL.Read())

@@ -43,10 +43,11 @@ namespace Club_de_go_Senthé
             listeEmployé.Clear();
             while (resultatSQL.Read())
             {
-                Employé employe = new Employé(resultatSQL["prenom"].ToString(), resultatSQL["nom"].ToString(), resultatSQL["numTelephone"].ToString(), resultatSQL["Adresse Courriel "].ToString(), resultatSQL["Adresse"].ToString());
+                Employé employe = new Employé(resultatSQL["prenom"].ToString(), resultatSQL["nom"].ToString(), resultatSQL["telephone"].ToString(), resultatSQL["courriel"].ToString(), resultatSQL["rue"].ToString());
                 listeEmployé.Add(employe);
-                resultatSQL.Close();
+                
             }
+            resultatSQL.Close();
             return listeEmployé;
         }
 

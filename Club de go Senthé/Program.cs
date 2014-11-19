@@ -16,7 +16,7 @@ namespace Club_de_go_Senthé
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmConnexion());
+            Application.Run(new FrmEmploye());
         }
     }
 }

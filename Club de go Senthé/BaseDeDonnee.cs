@@ -17,7 +17,7 @@ namespace Club_de_go_Senthé
             get
             {
                 if (BaseDeDonnee.m_sqlConnection == null)
-                    m_sqlConnection = new SqlConnection("DataSource=ed4sql2.laboratoire.collegeem.qc.ca; Initial Catalog=e306_A14_Sim_e02;User ID=vduval;Pwd=speciale4_");
+                    m_sqlConnection = new SqlConnection("Data Source=ed4sql2.laboratoire.collegeem.qc.ca; Initial Catalog=e306_A14_Sim_e02;User ID=vduval;Pwd=speciale4_");
 
                 return m_sqlConnection;
             }

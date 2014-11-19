@@ -28,10 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem("Test");
             this.grpListeJoueurs = new System.Windows.Forms.GroupBox();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-            this.lstListeJoueur = new System.Windows.Forms.ListView();
+            this.lsvListeJoueur = new System.Windows.Forms.ListView();
             this.grpActions = new System.Windows.Forms.GroupBox();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fichierToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -45,6 +44,8 @@
             this.col_telephone = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.col_rang = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.col_courriel = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.employésToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ajouterUnEmployéToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.grpListeJoueurs.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -56,7 +57,7 @@
             // 
             // grpListeJoueurs
             // 
-            this.grpListeJoueurs.Controls.Add(this.lstListeJoueur);
+            this.grpListeJoueurs.Controls.Add(this.lsvListeJoueur);
             this.grpListeJoueurs.Dock = System.Windows.Forms.DockStyle.Fill;
             this.grpListeJoueurs.Location = new System.Drawing.Point(0, 0);
             this.grpListeJoueurs.Name = "grpListeJoueurs";
@@ -84,26 +85,26 @@
             this.splitContainer1.SplitterDistance = 169;
             this.splitContainer1.TabIndex = 1;
             // 
-            // lstListeJoueur
+            // lsvListeJoueur
             // 
-            this.lstListeJoueur.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.lsvListeJoueur.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.lstListeJoueur.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.lsvListeJoueur.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.col_Nom,
             this.col_noMembreCga,
             this.col_rang,
             this.col_courriel,
             this.col_telephone,
             this.col_adresse});
-            this.lstListeJoueur.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem1});
-            this.lstListeJoueur.Location = new System.Drawing.Point(6, 19);
-            this.lstListeJoueur.Name = "lstListeJoueur";
-            this.lstListeJoueur.Size = new System.Drawing.Size(807, 478);
-            this.lstListeJoueur.TabIndex = 0;
-            this.lstListeJoueur.UseCompatibleStateImageBehavior = false;
-            this.lstListeJoueur.View = System.Windows.Forms.View.Details;
+            this.lsvListeJoueur.FullRowSelect = true;
+            this.lsvListeJoueur.GridLines = true;
+            this.lsvListeJoueur.Location = new System.Drawing.Point(6, 19);
+            this.lsvListeJoueur.Name = "lsvListeJoueur";
+            this.lsvListeJoueur.Size = new System.Drawing.Size(807, 478);
+            this.lsvListeJoueur.TabIndex = 0;
+            this.lsvListeJoueur.UseCompatibleStateImageBehavior = false;
+            this.lsvListeJoueur.View = System.Windows.Forms.View.Details;
             // 
             // grpActions
             // 
@@ -121,6 +122,7 @@
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fichierToolStripMenuItem,
+            this.employésToolStripMenuItem,
             this.membresToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
@@ -205,6 +207,20 @@
             this.col_courriel.Text = "Courriel";
             this.col_courriel.Width = 145;
             // 
+            // employésToolStripMenuItem
+            // 
+            this.employésToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ajouterUnEmployéToolStripMenuItem});
+            this.employésToolStripMenuItem.Name = "employésToolStripMenuItem";
+            this.employésToolStripMenuItem.Size = new System.Drawing.Size(70, 20);
+            this.employésToolStripMenuItem.Text = "Employés";
+            // 
+            // ajouterUnEmployéToolStripMenuItem
+            // 
+            this.ajouterUnEmployéToolStripMenuItem.Name = "ajouterUnEmployéToolStripMenuItem";
+            this.ajouterUnEmployéToolStripMenuItem.Size = new System.Drawing.Size(188, 22);
+            this.ajouterUnEmployéToolStripMenuItem.Text = "Ajouter un employé...";
+            // 
             // FrmEmploye
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -231,7 +247,7 @@
 
         private System.Windows.Forms.GroupBox grpListeJoueurs;
         private System.Windows.Forms.SplitContainer splitContainer1;
-        private System.Windows.Forms.ListView lstListeJoueur;
+        private System.Windows.Forms.ListView lsvListeJoueur;
         private System.Windows.Forms.GroupBox grpActions;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem fichierToolStripMenuItem;
@@ -245,5 +261,7 @@
         private System.Windows.Forms.ColumnHeader col_courriel;
         private System.Windows.Forms.ColumnHeader col_telephone;
         private System.Windows.Forms.ColumnHeader col_adresse;
+        private System.Windows.Forms.ToolStripMenuItem employésToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem ajouterUnEmployéToolStripMenuItem;
     }
 }

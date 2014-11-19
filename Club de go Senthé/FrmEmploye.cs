@@ -12,6 +12,9 @@ namespace Club_de_go_Senthé
 {
     public partial class FrmEmploye : Form
     {
+
+        private FrmAjouterJoueur frmAjouterJoueur;
+
         public FrmEmploye()
         {
             InitializeComponent();
@@ -20,17 +23,18 @@ namespace Club_de_go_Senthé
 
         private void RemplirListView()
         {
-            List<Employé> lstEmploye = Employé.ChargerTousLesEmployes();
+            lsvListeJoueur.Items.Clear();
+            List<Joueur> lstJoueurs = Joueur.ChargerTousLesJoueurs();
 
-            foreach (Employé employeCourant in lstEmploye)
+            foreach (Joueur joueurCourant in lstJoueurs)
             {
-                ListViewItem nouvItem = new ListViewItem(employeCourant.nom + ", " + employeCourant.Prenom);
-                nouvItem.SubItems.Add("");
-                nouvItem.SubItems.Add("");
-                nouvItem.SubItems.Add(employeCourant.Courriel);
-                nouvItem.SubItems.Add(employeCourant.Telephone);
+                ListViewItem nouvItem = new ListViewItem(joueurCourant.nom + ", " + joueurCourant.Prenom);
+                nouvItem.SubItems.Add(joueurCourant.NoMembre);
+                nouvItem.SubItems.Add(joueurCourant.Rang);
+                nouvItem.SubItems.Add(joueurCourant.Courriel);
+                nouvItem.SubItems.Add(joueurCourant.Telephone);
                 
-                string adresse = employeCourant.NumeroRue + " " + employeCourant.Rue + ", " + employeCourant.ville;
+                string adresse = joueurCourant.NumeroRue + " " + joueurCourant.Rue + ", " + joueurCourant.ville;
                 nouvItem.SubItems.Add(adresse);
 
                 lsvListeJoueur.Items.Add(nouvItem);
@@ -39,7 +43,14 @@ namespace Club_de_go_Senthé
 
         private void ajouterUnMembreToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            new FrmAjouterJoueur().ShowDialog();
+            frmAjouterJoueur = new FrmAjouterJoueur();
+            frmAjouterJoueur.JoueurAjouter += MembreAjouter_frmAjouterMembre;
+            frmAjouterJoueur.ShowDialog();
+        }
+
+        private void MembreAjouter_frmAjouterMembre(object sender, EventArgs e)
+        {
+            RemplirListView();
         }
     }
 }

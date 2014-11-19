@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,7 +9,22 @@ namespace Club_de_go_Senthé
 {
     public abstract class Personne
     {
-        // retourne un objet abstrait personne qui peut être un Employé ou un joueur 
+        internal static int AjouterUnePersonne(string pPrenom, string pNom, string pTelephone, int pNumeroRue, string pRue,string pVille,string pCourriel, string pMotDePasse,string pNomUtilisateur)
+        {
+            SqlConnection Connection = BaseDeDonnee.SqlConnection;
+
+            SqlCommand CommandeSQL = Connection.CreateCommand();
+            CommandeSQL.CommandText = "INSERT INTO [dbo].[Personne] ([prenom],[nom],[telephone],[numeroRue],[rue],[ville],[courriel],[motDePasse],[nomUtilisateur])" +
+                                      "VALUES ('" + pPrenom + "', '" + pNom + "','" + pTelephone + "'," + pNumeroRue + ",'" + pRue + "','" + pVille + "','" + pCourriel + "','" + pMotDePasse + "','" + pNomUtilisateur + "');";
+            CommandeSQL.ExecuteNonQuery();
+
+            CommandeSQL = Connection.CreateCommand();
+            CommandeSQL.CommandText = "SELECT SCOPE_IDENTITY() AS [SCOPE_IDENTITY];";
+
+            string id = CommandeSQL.ExecuteScalar().ToString();
+
+            return int.Parse(id);
+        }
 
         #region CHAMPS & PROPRIÉTÉ
         ///------------------------------------------------------------------------
@@ -104,6 +120,7 @@ namespace Club_de_go_Senthé
         #endregion
 
         #region CONSTRUCTEUR 
+
         ///<summary>
         /// retourne les données nécessaires pour instancier un objet abstrait Personne 
         /// avec un prénom,Nom, NumTel, une adresse courriel et une adresse physique 
@@ -120,6 +137,7 @@ namespace Club_de_go_Senthé
             m_motDePasse = pMotDePasse;
             m_nomUtilisateur = pNomUtilisateur;
         }
+
         #endregion
     }
 }

@@ -62,6 +62,7 @@
     <Compile Include="FrmEmploye.Designer.cs">
       <DependentUpon>FrmEmploye.cs</DependentUpon>
     </Compile>
+    <Compile Include="Joueur.cs" />
     <Compile Include="Personne.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -36,5 +36,10 @@ namespace Club_de_go_Senthé
                 lsvListeJoueur.Items.Add(nouvItem);
             }
         }
+
+        private void ajouterUnMembreToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new FrmAjouterJoueur().ShowDialog();
+        }
     }
 }

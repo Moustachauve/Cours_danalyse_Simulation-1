@@ -22,8 +22,8 @@ namespace Club_de_go_Senthé
         #endregion
 
         #region CONSTRUCTEUR 
-        public Employé(string pPrenom, string pNom, string pNumTelephone, string pAdCourriel, string pAdresse)
-            : base(pPrenom, pNom, pNumTelephone, pAdCourriel, pAdresse)
+        public Employé(string pPrenom, string pNom, string pTelephone, int pNumeroRue, string pRue,string pVille,string pCourriel, string pMotDePasse, string pNomUtilisateur)
+            : base(pPrenom,pNom,pTelephone,pNumeroRue,pRue,pVille,pCourriel, pMotDePasse,pNomUtilisateur)
         {
 
         }
@@ -43,7 +43,7 @@ namespace Club_de_go_Senthé
             listeEmployé.Clear();
             while (resultatSQL.Read())
             {
-                Employé employe = new Employé(resultatSQL["prenom"].ToString(), resultatSQL["nom"].ToString(), resultatSQL["telephone"].ToString(), resultatSQL["courriel"].ToString(), resultatSQL["rue"].ToString());
+                Employé employe = new Employé(resultatSQL["prenom"].ToString(), resultatSQL["nom"].ToString(), resultatSQL["telephone"].ToString(), (int)resultatSQL["numeroRue"], resultatSQL["rue"].ToString(), resultatSQL["ville"].ToString(), resultatSQL["courriel"].ToString(), resultatSQL["motDePasse"].ToString(),resultatSQL["nomUtilisateur"].ToString());
                 listeEmployé.Add(employe);
                 
             }

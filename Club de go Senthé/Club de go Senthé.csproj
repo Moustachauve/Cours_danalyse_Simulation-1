@@ -48,6 +48,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BaseDeDonnee.cs" />
     <Compile Include="Employé.cs" />
     <Compile Include="FrmConnexion.cs">
       <SubType>Form</SubType>

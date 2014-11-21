@@ -28,36 +28,40 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.grpAjouterJoueur = new System.Windows.Forms.GroupBox();
+            this.lblNoMembre = new System.Windows.Forms.Label();
+            this.lblRang = new System.Windows.Forms.Label();
             this.btnEnvoyer = new System.Windows.Forms.Button();
             this.txtTelephone = new System.Windows.Forms.MaskedTextBox();
             this.lblTelephone = new System.Windows.Forms.Label();
             this.lblCourrielOptionnel = new System.Windows.Forms.Label();
-            this.txtCourriel = new System.Windows.Forms.TextBox();
             this.lblCourriel = new System.Windows.Forms.Label();
-            this.txtVille = new System.Windows.Forms.TextBox();
             this.lblVille = new System.Windows.Forms.Label();
-            this.txtRue = new System.Windows.Forms.TextBox();
             this.lblRue = new System.Windows.Forms.Label();
-            this.txtNoCivique = new System.Windows.Forms.TextBox();
             this.lblNoCivique = new System.Windows.Forms.Label();
-            this.txtMotDePasse = new System.Windows.Forms.TextBox();
             this.lblMotDePasse = new System.Windows.Forms.Label();
-            this.txtNomUtilisateur = new System.Windows.Forms.TextBox();
             this.lblNomUtilisateur = new System.Windows.Forms.Label();
-            this.txtNom = new System.Windows.Forms.TextBox();
             this.lblNom = new System.Windows.Forms.Label();
-            this.txtPrenom = new System.Windows.Forms.TextBox();
             this.lblPrenom = new System.Windows.Forms.Label();
-            this.txtRang = new System.Windows.Forms.TextBox();
-            this.lblRang = new System.Windows.Forms.Label();
-            this.txtNoMembre = new System.Windows.Forms.TextBox();
-            this.lblNoMembre = new System.Windows.Forms.Label();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.txtCourriel = new System.Windows.Forms.TextBox();
+            this.txtNoMembre = new Club_de_go_Senthé.UserControl1();
+            this.txtRang = new Club_de_go_Senthé.UserControl1();
+            this.txtVille = new Club_de_go_Senthé.UserControl1();
+            this.txtRue = new Club_de_go_Senthé.UserControl1();
+            this.txtNoCivique = new Club_de_go_Senthé.UserControl1();
+            this.txtMotDePasse = new Club_de_go_Senthé.UserControl1();
+            this.txtNomUtilisateur = new Club_de_go_Senthé.UserControl1();
+            this.txtNom = new Club_de_go_Senthé.UserControl1();
+            this.txtPrenom = new Club_de_go_Senthé.UserControl1();
             this.grpAjouterJoueur.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // grpAjouterJoueur
             // 
+            this.grpAjouterJoueur.Controls.Add(this.txtCourriel);
             this.grpAjouterJoueur.Controls.Add(this.txtNoMembre);
             this.grpAjouterJoueur.Controls.Add(this.lblNoMembre);
             this.grpAjouterJoueur.Controls.Add(this.txtRang);
@@ -66,7 +70,6 @@
             this.grpAjouterJoueur.Controls.Add(this.txtTelephone);
             this.grpAjouterJoueur.Controls.Add(this.lblTelephone);
             this.grpAjouterJoueur.Controls.Add(this.lblCourrielOptionnel);
-            this.grpAjouterJoueur.Controls.Add(this.txtCourriel);
             this.grpAjouterJoueur.Controls.Add(this.lblCourriel);
             this.grpAjouterJoueur.Controls.Add(this.txtVille);
             this.grpAjouterJoueur.Controls.Add(this.lblVille);
@@ -85,15 +88,33 @@
             this.grpAjouterJoueur.Dock = System.Windows.Forms.DockStyle.Fill;
             this.grpAjouterJoueur.Location = new System.Drawing.Point(0, 0);
             this.grpAjouterJoueur.Name = "grpAjouterJoueur";
-            this.grpAjouterJoueur.Size = new System.Drawing.Size(353, 449);
+            this.grpAjouterJoueur.Size = new System.Drawing.Size(297, 449);
             this.grpAjouterJoueur.TabIndex = 0;
             this.grpAjouterJoueur.TabStop = false;
             this.grpAjouterJoueur.Text = "Ajouter un joueur";
             // 
+            // lblNoMembre
+            // 
+            this.lblNoMembre.AutoSize = true;
+            this.lblNoMembre.Location = new System.Drawing.Point(12, 367);
+            this.lblNoMembre.Name = "lblNoMembre";
+            this.lblNoMembre.Size = new System.Drawing.Size(86, 13);
+            this.lblNoMembre.TabIndex = 22;
+            this.lblNoMembre.Text = "No membre CGA";
+            // 
+            // lblRang
+            // 
+            this.lblRang.AutoSize = true;
+            this.lblRang.Location = new System.Drawing.Point(12, 328);
+            this.lblRang.Name = "lblRang";
+            this.lblRang.Size = new System.Drawing.Size(33, 13);
+            this.lblRang.TabIndex = 20;
+            this.lblRang.Text = "Rang";
+            // 
             // btnEnvoyer
             // 
             this.btnEnvoyer.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.btnEnvoyer.Location = new System.Drawing.Point(141, 414);
+            this.btnEnvoyer.Location = new System.Drawing.Point(118, 414);
             this.btnEnvoyer.Name = "btnEnvoyer";
             this.btnEnvoyer.Size = new System.Drawing.Size(75, 23);
             this.btnEnvoyer.TabIndex = 19;
@@ -108,7 +129,7 @@
             this.txtTelephone.Location = new System.Drawing.Point(12, 305);
             this.txtTelephone.Mask = "(000)-000-0000";
             this.txtTelephone.Name = "txtTelephone";
-            this.txtTelephone.Size = new System.Drawing.Size(329, 20);
+            this.txtTelephone.Size = new System.Drawing.Size(258, 20);
             this.txtTelephone.TabIndex = 18;
             // 
             // lblTelephone
@@ -130,15 +151,6 @@
             this.lblCourrielOptionnel.TabIndex = 16;
             this.lblCourrielOptionnel.Text = "(Optionnel)";
             // 
-            // txtCourriel
-            // 
-            this.txtCourriel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtCourriel.Location = new System.Drawing.Point(12, 266);
-            this.txtCourriel.Name = "txtCourriel";
-            this.txtCourriel.Size = new System.Drawing.Size(329, 20);
-            this.txtCourriel.TabIndex = 15;
-            // 
             // lblCourriel
             // 
             this.lblCourriel.AutoSize = true;
@@ -147,15 +159,6 @@
             this.lblCourriel.Size = new System.Drawing.Size(42, 13);
             this.lblCourriel.TabIndex = 14;
             this.lblCourriel.Text = "Courriel";
-            // 
-            // txtVille
-            // 
-            this.txtVille.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtVille.Location = new System.Drawing.Point(12, 227);
-            this.txtVille.Name = "txtVille";
-            this.txtVille.Size = new System.Drawing.Size(329, 20);
-            this.txtVille.TabIndex = 13;
             // 
             // lblVille
             // 
@@ -166,15 +169,6 @@
             this.lblVille.TabIndex = 12;
             this.lblVille.Text = "Ville";
             // 
-            // txtRue
-            // 
-            this.txtRue.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtRue.Location = new System.Drawing.Point(89, 188);
-            this.txtRue.Name = "txtRue";
-            this.txtRue.Size = new System.Drawing.Size(252, 20);
-            this.txtRue.TabIndex = 11;
-            // 
             // lblRue
             // 
             this.lblRue.AutoSize = true;
@@ -183,15 +177,6 @@
             this.lblRue.Size = new System.Drawing.Size(27, 13);
             this.lblRue.TabIndex = 10;
             this.lblRue.Text = "Rue";
-            // 
-            // txtNoCivique
-            // 
-            this.txtNoCivique.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtNoCivique.Location = new System.Drawing.Point(12, 188);
-            this.txtNoCivique.Name = "txtNoCivique";
-            this.txtNoCivique.Size = new System.Drawing.Size(71, 20);
-            this.txtNoCivique.TabIndex = 9;
             // 
             // lblNoCivique
             // 
@@ -202,16 +187,6 @@
             this.lblNoCivique.TabIndex = 8;
             this.lblNoCivique.Text = "No civique";
             // 
-            // txtMotDePasse
-            // 
-            this.txtMotDePasse.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtMotDePasse.Location = new System.Drawing.Point(12, 149);
-            this.txtMotDePasse.Name = "txtMotDePasse";
-            this.txtMotDePasse.Size = new System.Drawing.Size(329, 20);
-            this.txtMotDePasse.TabIndex = 7;
-            this.txtMotDePasse.UseSystemPasswordChar = true;
-            // 
             // lblMotDePasse
             // 
             this.lblMotDePasse.AutoSize = true;
@@ -220,15 +195,6 @@
             this.lblMotDePasse.Size = new System.Drawing.Size(71, 13);
             this.lblMotDePasse.TabIndex = 6;
             this.lblMotDePasse.Text = "Mot de passe";
-            // 
-            // txtNomUtilisateur
-            // 
-            this.txtNomUtilisateur.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtNomUtilisateur.Location = new System.Drawing.Point(12, 110);
-            this.txtNomUtilisateur.Name = "txtNomUtilisateur";
-            this.txtNomUtilisateur.Size = new System.Drawing.Size(329, 20);
-            this.txtNomUtilisateur.TabIndex = 5;
             // 
             // lblNomUtilisateur
             // 
@@ -239,15 +205,6 @@
             this.lblNomUtilisateur.TabIndex = 4;
             this.lblNomUtilisateur.Text = "Nom d\'utilisateur";
             // 
-            // txtNom
-            // 
-            this.txtNom.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtNom.Location = new System.Drawing.Point(12, 71);
-            this.txtNom.Name = "txtNom";
-            this.txtNom.Size = new System.Drawing.Size(329, 20);
-            this.txtNom.TabIndex = 3;
-            // 
             // lblNom
             // 
             this.lblNom.AutoSize = true;
@@ -256,15 +213,6 @@
             this.lblNom.Size = new System.Drawing.Size(29, 13);
             this.lblNom.TabIndex = 2;
             this.lblNom.Text = "Nom";
-            // 
-            // txtPrenom
-            // 
-            this.txtPrenom.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtPrenom.Location = new System.Drawing.Point(12, 32);
-            this.txtPrenom.Name = "txtPrenom";
-            this.txtPrenom.Size = new System.Drawing.Size(329, 20);
-            this.txtPrenom.TabIndex = 1;
             // 
             // lblPrenom
             // 
@@ -275,23 +223,18 @@
             this.lblPrenom.TabIndex = 0;
             this.lblPrenom.Text = "Prénom";
             // 
-            // txtRang
+            // errorProvider1
             // 
-            this.txtRang.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.errorProvider1.ContainerControl = this;
+            // 
+            // txtCourriel
+            // 
+            this.txtCourriel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtRang.Location = new System.Drawing.Point(12, 344);
-            this.txtRang.Name = "txtRang";
-            this.txtRang.Size = new System.Drawing.Size(329, 20);
-            this.txtRang.TabIndex = 21;
-            // 
-            // lblRang
-            // 
-            this.lblRang.AutoSize = true;
-            this.lblRang.Location = new System.Drawing.Point(12, 328);
-            this.lblRang.Name = "lblRang";
-            this.lblRang.Size = new System.Drawing.Size(33, 13);
-            this.lblRang.TabIndex = 20;
-            this.lblRang.Text = "Rang";
+            this.txtCourriel.Location = new System.Drawing.Point(12, 266);
+            this.txtCourriel.Name = "txtCourriel";
+            this.txtCourriel.Size = new System.Drawing.Size(258, 20);
+            this.txtCourriel.TabIndex = 24;
             // 
             // txtNoMembre
             // 
@@ -299,23 +242,102 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtNoMembre.Location = new System.Drawing.Point(12, 383);
             this.txtNoMembre.Name = "txtNoMembre";
-            this.txtNoMembre.Size = new System.Drawing.Size(329, 20);
+            this.txtNoMembre.NomControle = "no membre CGA";
+            this.txtNoMembre.Size = new System.Drawing.Size(273, 20);
             this.txtNoMembre.TabIndex = 23;
+            this.txtNoMembre.UseSystemPasswordChar = false;
             // 
-            // lblNoMembre
+            // txtRang
             // 
-            this.lblNoMembre.AutoSize = true;
-            this.lblNoMembre.Location = new System.Drawing.Point(12, 367);
-            this.lblNoMembre.Name = "lblNoMembre";
-            this.lblNoMembre.Size = new System.Drawing.Size(86, 13);
-            this.lblNoMembre.TabIndex = 22;
-            this.lblNoMembre.Text = "No membre CGA";
+            this.txtRang.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtRang.Location = new System.Drawing.Point(12, 344);
+            this.txtRang.Name = "txtRang";
+            this.txtRang.NomControle = "rang";
+            this.txtRang.Size = new System.Drawing.Size(273, 20);
+            this.txtRang.TabIndex = 21;
+            this.txtRang.UseSystemPasswordChar = false;
+            // 
+            // txtVille
+            // 
+            this.txtVille.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtVille.Location = new System.Drawing.Point(12, 227);
+            this.txtVille.Name = "txtVille";
+            this.txtVille.NomControle = "ville";
+            this.txtVille.Size = new System.Drawing.Size(273, 20);
+            this.txtVille.TabIndex = 13;
+            this.txtVille.UseSystemPasswordChar = false;
+            // 
+            // txtRue
+            // 
+            this.txtRue.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtRue.Location = new System.Drawing.Point(89, 188);
+            this.txtRue.Name = "txtRue";
+            this.txtRue.NomControle = "rue";
+            this.txtRue.Size = new System.Drawing.Size(196, 20);
+            this.txtRue.TabIndex = 11;
+            this.txtRue.UseSystemPasswordChar = false;
+            // 
+            // txtNoCivique
+            // 
+            this.txtNoCivique.Location = new System.Drawing.Point(12, 188);
+            this.txtNoCivique.Name = "txtNoCivique";
+            this.txtNoCivique.NomControle = "no civique";
+            this.txtNoCivique.Size = new System.Drawing.Size(71, 20);
+            this.txtNoCivique.TabIndex = 9;
+            this.txtNoCivique.UseSystemPasswordChar = false;
+            // 
+            // txtMotDePasse
+            // 
+            this.txtMotDePasse.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtMotDePasse.Location = new System.Drawing.Point(12, 149);
+            this.txtMotDePasse.Name = "txtMotDePasse";
+            this.txtMotDePasse.NomControle = "mot de passe";
+            this.txtMotDePasse.Size = new System.Drawing.Size(273, 20);
+            this.txtMotDePasse.TabIndex = 7;
+            this.txtMotDePasse.UseSystemPasswordChar = true;
+            // 
+            // txtNomUtilisateur
+            // 
+            this.txtNomUtilisateur.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtNomUtilisateur.Location = new System.Drawing.Point(12, 110);
+            this.txtNomUtilisateur.Name = "txtNomUtilisateur";
+            this.txtNomUtilisateur.NomControle = "nom d\'utilisateur";
+            this.txtNomUtilisateur.Size = new System.Drawing.Size(273, 20);
+            this.txtNomUtilisateur.TabIndex = 5;
+            this.txtNomUtilisateur.UseSystemPasswordChar = false;
+            // 
+            // txtNom
+            // 
+            this.txtNom.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtNom.Location = new System.Drawing.Point(12, 71);
+            this.txtNom.Name = "txtNom";
+            this.txtNom.NomControle = "nom";
+            this.txtNom.Size = new System.Drawing.Size(273, 20);
+            this.txtNom.TabIndex = 3;
+            this.txtNom.UseSystemPasswordChar = false;
+            // 
+            // txtPrenom
+            // 
+            this.txtPrenom.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtPrenom.Location = new System.Drawing.Point(12, 32);
+            this.txtPrenom.Name = "txtPrenom";
+            this.txtPrenom.NomControle = "prénom";
+            this.txtPrenom.Size = new System.Drawing.Size(273, 20);
+            this.txtPrenom.TabIndex = 1;
+            this.txtPrenom.UseSystemPasswordChar = false;
             // 
             // FrmAjouterJoueur
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(353, 449);
+            this.ClientSize = new System.Drawing.Size(297, 449);
             this.Controls.Add(this.grpAjouterJoueur);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
@@ -325,6 +347,7 @@
             this.Text = "FrmAjouterJoueur";
             this.grpAjouterJoueur.ResumeLayout(false);
             this.grpAjouterJoueur.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -332,29 +355,30 @@
         #endregion
 
         private System.Windows.Forms.GroupBox grpAjouterJoueur;
-        private System.Windows.Forms.TextBox txtMotDePasse;
+        private UserControl1 txtMotDePasse;
         private System.Windows.Forms.Label lblMotDePasse;
-        private System.Windows.Forms.TextBox txtNomUtilisateur;
+        private UserControl1 txtNomUtilisateur;
         private System.Windows.Forms.Label lblNomUtilisateur;
-        private System.Windows.Forms.TextBox txtNom;
+        private UserControl1 txtNom;
         private System.Windows.Forms.Label lblNom;
-        private System.Windows.Forms.TextBox txtPrenom;
+        private UserControl1 txtPrenom;
         private System.Windows.Forms.Label lblPrenom;
-        private System.Windows.Forms.TextBox txtNoCivique;
+        private UserControl1 txtNoCivique;
         private System.Windows.Forms.Label lblNoCivique;
-        private System.Windows.Forms.TextBox txtVille;
+        private UserControl1 txtVille;
         private System.Windows.Forms.Label lblVille;
-        private System.Windows.Forms.TextBox txtRue;
+        private UserControl1 txtRue;
         private System.Windows.Forms.Label lblRue;
         private System.Windows.Forms.MaskedTextBox txtTelephone;
         private System.Windows.Forms.Label lblTelephone;
         private System.Windows.Forms.Label lblCourrielOptionnel;
-        private System.Windows.Forms.TextBox txtCourriel;
         private System.Windows.Forms.Label lblCourriel;
         private System.Windows.Forms.Button btnEnvoyer;
-        private System.Windows.Forms.TextBox txtRang;
+        private UserControl1 txtRang;
         private System.Windows.Forms.Label lblRang;
-        private System.Windows.Forms.TextBox txtNoMembre;
+        private UserControl1 txtNoMembre;
         private System.Windows.Forms.Label lblNoMembre;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.TextBox txtCourriel;
     }
 }

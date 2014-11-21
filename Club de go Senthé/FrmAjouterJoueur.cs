@@ -22,12 +22,37 @@ namespace Club_de_go_Senthé
 
         private void btnEnvoyer_Click(object sender, EventArgs e)
         {
-            Joueur.AjouterUnJoueur(txtPrenom.Text, txtNom.Text, txtTelephone.Text, int.Parse(txtNoCivique.Text), txtRue.Text, txtVille.Text, txtCourriel.Text, txtMotDePasse.Text, txtNomUtilisateur.Text, txtRang.Text, txtNoMembre.Text);
+            if (ValidateInput())
+            {
 
-            if (JoueurAjouter != null)
-                JoueurAjouter(this, null);
+                Joueur.AjouterUnJoueur(txtPrenom.Text, txtNom.Text, txtTelephone.Text, int.Parse(txtNoCivique.Text), txtRue.Text, txtVille.Text, txtCourriel.Text, txtMotDePasse.Text, txtNomUtilisateur.Text, txtRang.Text, txtNoMembre.Text);
 
-            this.Close();
+                if (JoueurAjouter != null)
+                    JoueurAjouter(this, null);
+
+                this.Close();
+            }
+        }
+
+        private bool ValidateInput()
+        {
+            int nbValide = 0;
+
+            foreach (var item in this.Controls[0].Controls)
+            {
+                if(item is UserControl1)
+                {
+                    if (((UserControl1)item).ValiderTexte())
+                        nbValide++;
+                }
+            }
+
+            if (txtTelephone.MaskFull)
+                nbValide++;
+            else
+                errorProvider1.SetError(txtTelephone, "Le téléphone ne peut pas être vide.");
+
+            return nbValide == 10;
         }
     }
 }
